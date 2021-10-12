@@ -1,8 +1,8 @@
 % Octave Scrip
 % Title               :Solucion de inecuaciones
 % Descripcion         :Scrip para resolver inecuaciones de 
-%                         primer grado,segundo grado y valor absoluto
-% Author              :Bryan Abner Garcia Cruz
+%                     :primer grado,segundo grado y valor absoluto
+% Author              :Bryan Abner Garcia Cruz, Cruz Cruz Ximena Mayleth
 % Date                :202123180
 % Version             :1
 % Usage               :octave> /path/ResolucionDesigualdades
@@ -11,7 +11,11 @@
 
 pkg load symbolic
 
-% solucion de inecuaciones de primer grado
+%Se llama inecuacion a una desigualdad que contiene variables cambiando el = por un <, >, >=, <=;
+% Solucion de inecuaciones de primer grado
+inecuaciones_primer_grado = 'Son aquellas que pueden expresar de la forma ax+b=0 , siendo a y b numero reales; 
+inecuaciones_segundo_grado  = ' Se pueden expresar de la siguiente forma ax^2+bx+c>0 ';
+inecuaciones_con_valor_absoluto = ' Se pueden expresar de la forma |x|<0 ';
 disp('Solucion de la inecuacion de primer grado');
 disp('(x<-7)')
 syms x
@@ -27,6 +31,10 @@ plot(x,sign(y)*5,'bs-')
 title( "(x<7-)")
 
 % solucion de inecuaciones de segundo grado
+i_segundo_grado = ' ax^2+bx+c>0 ';
+i_segundo_grado2 = ' ax^2+bx+c<0 ';
+i_segundo_grado3 = 'ax^2+bx+c<=0 ';
+i_segundo_grado4 = 'ax^2+bx+c>=0 ';
 disp('Solucion de la inecuacion de segundo grado');
 disp('(x^2+6<6,x,)')
 syms x
@@ -39,6 +47,7 @@ ezplot((x)^2,y)
 
 
 % solucion de inecuaciones de valor absoluto
+i_con_valor_absoluto = ' |x|<0 ';
 disp('Solucion de la inecuacion de valor absoluto');
 disp("|x+8|<3")
 solve(abs(x+8)>3)
