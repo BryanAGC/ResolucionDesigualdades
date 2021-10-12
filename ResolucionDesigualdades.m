@@ -12,10 +12,12 @@
 pkg load symbolic
 
 %Se llama inecuacion a una desigualdad que contiene variables cambiando el = por un <, >, >=, <=;
-% Solucion de inecuaciones de primer grado
 inecuaciones_primer_grado = 'Son aquellas que pueden expresar de la forma ax+b=0 , siendo a y b numero reales; 
 inecuaciones_segundo_grado  = ' Se pueden expresar de la siguiente forma ax^2+bx+c>0 ';
 inecuaciones_con_valor_absoluto = ' Se pueden expresar de la forma |x|<0 ';
+
+% Solucion de inecuaciones de primer grado con uan incognita
+i_primer_grado = ' ax+b<o ';
 disp('Solucion de la inecuacion de primer grado');
 disp('(x<-7)')
 syms x
@@ -30,7 +32,7 @@ plot(x,y,'ro-')
 plot(x,sign(y)*5,'bs-')
 title( "(x<7-)")
 
-% solucion de inecuaciones de segundo grado
+% solucion de inecuaciones de segundo grado con una incognita 
 i_segundo_grado = ' ax^2+bx+c>0 ';
 i_segundo_grado2 = ' ax^2+bx+c<0 ';
 i_segundo_grado3 = 'ax^2+bx+c<=0 ';
